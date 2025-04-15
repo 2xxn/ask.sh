@@ -241,9 +241,9 @@ Optional, but highly recommended if you want `ask` command to work more nicely:
          - You can get your API key from [NanoGPT](https://nano-gpt.com/api)
          - Set `ASK_SH_LLM_PROVIDER=nanogpt`
     4. Optional: Configure model settings
-       - OpenAI: Set `ASK_SH_OPENAI_MODEL` (default: gpt-4o)
-       - Anthropic: Set `ASK_SH_ANTHROPIC_MODEL` (default: claude-3-opus-20240229)
-       - NanoGPT: Set `ASK_SH_NANOGPT_MODEL` (default: qwen-turbo)
+       - OpenAI: Set `ASK_SH_OPENAI_MODEL` (default: gpt-3.5-turbo)
+       - Anthropic: Set `ASK_SH_ANTHROPIC_MODEL` (default: claude-3-5-sonnet-latest)
+       - NanoGPT: Set `ASK_SH_NANOGPT_MODEL` (default: gpt-4o)
     5. If you don't want to use tmux or send your terminal outputs to the LLM provider, set `ASK_SH_NO_PANE=true`
         - If you don't set this variable when you query to `ask`, `ask` command will always recommend you to use tmux.
     6. Set up your shell environment
@@ -307,20 +307,20 @@ Similar projects:
 
 - OpenAI and its compatible APIs (default)
   - Models: GPT-3.5, GPT-4, and any other models OpenAI serves
-  - Configure with `ASK_SH_OPENAI_MODEL` (default: gpt-4o)
+  - Configure with `ASK_SH_OPENAI_MODEL` (default: gpt-3.5-turbo)
     - Example: `ASK_SH_OPENAI_MODEL=gpt-4`
   - Custom Endpoints: You can use OpenAI-compatible APIs by setting `ASK_SH_OPENAI_BASE_URL`
     - Ollama Example: `ASK_SH_OPENAI_BASE_URL="http://localhost:11434/v1" ASK_SH_OPENAI_MODEL="deepseek-r1:8b" ask who are you`
     - DeepSeek Example: `ASK_SH_OPENAI_BASE_URL="https://api.deepseek.com" ASK_SH_OPENAI_MODEL="deepseek-chat" ASK_SH_OPENAI_API_KEY=xxx ask who are you`
 - Anthropic
   - Models: Claude-3 and other Claude models
-  - Configure with `ASK_SH_ANTHROPIC_MODEL` (default: claude-3-5-opus-latest)
-  - Example: `ASK_SH_LLM_PROVIDER=anthropic ASK_SH_ANTHROPIC_MODEL=claude-3-opus-20240229`
+  - Configure with `ASK_SH_ANTHROPIC_MODEL` (default: claude-3-5-sonnet-latest)
+  - Example: `ASK_SH_LLM_PROVIDER=anthropic ASK_SH_ANTHROPIC_MODEL=claude-3-5-sonnet-latest`
 - NanoGPT
-  - Models: List of models available at [NanoGPT](https://nano-gpt.com/api)
-  - Configure with `ASK_SH_NANOGPT_MODEL` (default: qwen-turbo)
-  - Internet: add `:online` to the model name to use the online functionality (e.g., `qwen-turbo:online`)
-  - Example: `ASK_SH_LLM_PROVIDER=nanogpt ASK_SH_NANOGPT_MODEL=qwen-turbo`
+  - Models: List of models available at [NanoGPT](https://nano-gpt.com/pricing)
+  - Configure with `ASK_SH_NANOGPT_MODEL` (default: gpt-4o)
+  - Internet: add `:online` to the model name to use the online functionality (e.g., `gpt-4o:online`)
+  - Example: `ASK_SH_LLM_PROVIDER=nanogpt ASK_SH_NANOGPT_MODEL=gpt-3.5-turbo`
 
 To switch providers, set `ASK_SH_LLM_PROVIDER` to either `openai`, `anthropic` or `nanogpt`. Don't forget to set the corresponding API key:
 - OpenAI: `ASK_SH_OPENAI_API_KEY`
