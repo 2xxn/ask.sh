@@ -90,7 +90,7 @@ fn get_llm_config() -> Result<LLMConfig, LLMError> {
                 .map_err(|_| LLMError::ConfigError("NanoGPT API key not found".to_string()))?;
 
             // Qwen turbo is a cheap and fast model. Does the job for most cases.
-            let model = env::var(ENV_NANOGPT_MODEL).unwrap_or_else(|_| "qwen-turbo".to_string());
+            let model = env::var(ENV_NANOGPT_MODEL).unwrap_or_else(|_| "gpt-4o".to_string());
 
             Ok(LLMConfig {
                 provider,

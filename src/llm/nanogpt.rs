@@ -176,13 +176,13 @@ mod tests {
     async fn test_nanogpt_provider_creation() {
         let config = LLMConfig {
             provider: "nanogpt".to_string(),
-            model: "qwen-turbo".to_string(),
+            model: "gpt-4o".to_string(),
             api_key: "test-key".to_string(),
             base_url: None,
         };
 
         let provider = NanoGPTProvider::new(config).unwrap();
         assert_eq!(provider.name(), "nanogpt");
-        assert_eq!(provider.model(), "qwen-turbo");
+        assert_eq!(provider.model(), "gpt-4o");
     }
 }
